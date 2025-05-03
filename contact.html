@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Timber & Grace</title>
+    <meta name="description" content="Contact Timber & Grace for inquiries or support. Reach us by phone, email, or our contact form.">
+    <meta name="keywords" content="Timber & Grace, contact, furniture store, customer support">
+    <meta name="author" content="Timber & Grace">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/61107a0cf8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Timber & Grace Home">
+                <img src="Yellow Black Bright Round Sofa Line Icon Furniture Logo.png" alt="Timber & Grace Furniture Logo">
+               <!-- <strong>Timber <br> & <br>Grace</strong> -->
+            </a>
+        </div>
+        <div class="search-bar">
+            <select name="category" aria-label="Select product category">
+                <option value="all">All Categories</option>
+                <option value="furniture">Furniture</option>
+                <option value="decor">Decor</option>
+                <option value="outdoor">Outdoor</option>
+            </select>
+            <div class="search-input-container">
+                <input type="text" placeholder="Search products..." aria-label="Search products" id="search-input">
+                <ul class="autosuggestions" id="autosuggestions"></ul>
+            </div>
+            <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-buttons">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <div class="cart-dropdown">
+                    <h3>Shopping Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p class="total">Total: Ksh.0</p>
+                    <button id="checkout">Checkout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>
+            We’d love to hear from you! The Timber & Grace Team is committed to providing you with premier customer support. 
+            Please reach out to us by phone, email, or through the contact form, and we will be in touch.
+        </p>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required aria-label="Full Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required aria-label="Email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Message" required aria-label="Message"></textarea>
+            <button type="submit">Contact Us</button>
+        </form>
+        <div class="social-icons">
+            <a href="tel:+254700480098" class="phone" aria-label="Call Timber & Grace"><i class="fa-sharp fa-solid fa-phone-volume"></i></a>
+            <a href="https://wa.link/y8zz6m" class="whatsapp" aria-label="Message Timber & Grace on WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a href="mailto:info@timberandgrace.com" class="email" aria-label="Email Timber & Grace"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://x.com/YatzaaAlkaline" class="twitter" aria-label="Follow Timber & Grace on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="email">
+            <p>Email us at: <a href="mailto:info@timberandgrace.com">info@timberandgrace.com</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form class="newsletter-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="copyright">
+            © 2025 Timber & Grace. All Rights Reserved.
+        </div>
+    </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Timber & Grace",
+        "url": "https://www.timberandgrace.com/contact.html",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+254700480098",
+            "contactType": "Customer Service",
+            "email": "info@timberandgrace.com"
+        }
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
