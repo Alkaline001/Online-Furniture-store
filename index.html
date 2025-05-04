@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timber & Grace - Furniture Store</title>
+    <meta name="description" content="Shop high-quality furniture at Timber & Grace, offering free delivery across East and Central Africa.">
+    <meta name="keywords" content="furniture, Timber & Grace, home decor, sofas, chairs, outdoor furniture">
+    <meta name="author" content="Timber & Grace">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/61107a0cf8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Timber & Grace Home">
+                <img src="Yellow Black Bright Round Sofa Line Icon Furniture Logo.png" alt="Timber & Grace Furniture Logo">
+               <!-- <strong>Timber <br> & <br>Grace</strong> -->
+            </a>
+        </div>
+        <div class="search-bar">
+            <select name="category" aria-label="Select product category">
+                <option value="all">All Categories</option>
+                <option value="furniture">Furniture</option>
+                <option value="decor">Decor</option>
+                <option value="outdoor">Outdoor</option>
+            </select>
+            <div class="search-input-container">
+                <input type="text" placeholder="Search products..." aria-label="Search products" id="search-input">
+                <ul class="autosuggestions" id="autosuggestions"></ul>
+            </div>
+            <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-buttons">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <div class="cart-dropdown">
+                    <h3>Shopping Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p class="total">Total: Ksh.0</p>
+                    <button id="checkout">Checkout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <p class="delivery-notice">
+            Free delivery countrywide. Make your order and we deliver within 72 hours.
+        </p>
+        <section class="products" id="product-list">
+            <div class="product" data-name="Hanging Egg Chair" data-price="15000" data-category="outdoor">
+                <img src="hanging-chair-5200722.jpg" alt="Black outdoor hanging egg chair with cushions">
+                <h2>Hanging Egg Chair</h2>
+                <p>An outdoor black hanging egg chair with cushions.</p>
+                <p class="price">Ksh.15,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Chesterfield Loveseat" data-price="4000" data-category="furniture">
+                <img src="furniture-4687954.jpg" alt="Mustard-yellow Chesterfield loveseat">
+                <h2>Chesterfield Loveseat</h2>
+                <p>A plush, mustard-yellow Chesterfield loveseat with tufted upholstery.</p>
+                <p class="price">Ksh.5,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Wicker Sofa with Cushions" data-price="5000" data-category="furniture">
+                <img src="sofa-2155865_1920.jpg" alt="Elegant wicker sofa with cushions">
+                <h2>Wicker Sofa with Cushions</h2>
+                <p>Elegant wicker sofa featuring a curved frame and an airy design.</p>
+                <p class="price">Ksh.5,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Fabric Upholstered Sofa" data-price="5000" data-category="furniture">
+                <img src="sofa-1091071.jpg" alt="Contemporary three-seater sofa with patterned fabric">
+                <h2>Fabric Upholstered Sofa</h2>
+                <p>Contemporary three-seater sofa with a bold patterned fabric in geometric motifs.</p>
+                <p class="price">Ksh.5,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Sideboard" data-price="6000" data-category="furniture">
+                <img src="sideboard-947199.png" alt="Sideboard with wrought iron hardware">
+                <h2>Sideboard</h2>
+                <p>Has two cabinets with decorative wrought iron hardware.</p>
+                <p class="price">Ksh.6,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Rattan Peacock Chair" data-price="2500" data-category="furniture">
+                <img src="rattan-1462860.jpg" alt="Handcrafted rattan peacock chair">
+                <h2>Rattan Peacock Chair</h2>
+                <p>A handcrafted rattan chair with an ornate peacock design.</p>
+                <p class="price">Ksh.3,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Armchair" data-price="2000" data-category="furniture">
+                <img src="living-room-8368382.jpg" alt="Vibrant armchair with geometric patterns">
+                <h2>Armchair</h2>
+                <p>Vibrant armchair with geometric patterns.</p>
+                <p class="price">Ksh.2,500</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Black Leather Sofa Set" data-price="12000" data-category="furniture">
+                <img src="leather-sofa-186636_1920.jpg" alt="Black leather sofa set">
+                <h2>Black Leather Sofa Set</h2>
+                <p>Includes a 3-seater and a 2-seater, ideal for a modern living room.</p>
+                <p class="price">Ksh.12,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Accent Chair" data-price="1500" data-category="decor">
+                <img src="home-5667532.jpg" alt="Stylish accent chair">
+                <h2>Accent Chair</h2>
+                <p>Stylish piece that adds a pop of color or design to a room.</p>
+                <p class="price">Ksh.2,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Turquoise Armchair" data-price="5000" data-category="furniture">
+                <img src="ai-generated-8154089.jpg" alt="Turquoise armchair">
+                <h2>Turquoise Armchair</h2>
+                <p>Single and appealing armchair.</p>
+                <p class="price">Ksh.5,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Outdoor Cast Iron Bistro Set" data-price="5000" data-category="outdoor">
+                <img src="branded_garden_image_diagonal.png" alt="Outdoor cast iron bistro set">
+                <h2>Outdoor Cast Iron Bistro Set</h2>
+                <p>Includes two ornate chairs and a round table with intricate detailing.</p>
+                <p class="price">Ksh.5,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Antique Sideboard" data-price="7000" data-category="furniture">
+                <img src="antique-sideboard-948527.png" alt="Classic wooden antique sideboard">
+                <h2>Antique Sideboard</h2>
+                <p>Classic wooden sideboard with a rich, polished finish.</p>
+                <p class="price">Ksh.7,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product hidden" data-name="Modern Living Room Furniture Set" data-price="16000" data-category="furniture">
+                <img src="furniture-3208819.jpg" alt="Modern living room furniture set">
+                <h2>Modern Living Room Furniture Set</h2>
+                <p>Consisting of two sofas and an armchair.</p>
+                <p class="price">Ksh.16,000</p>
+                <input type="number" class="quantity" min="1" value="1" aria-label="Quantity">
+                <button class="add-to-cart">	</button>
+            </div>
+        </section>
+        <button id="see-more">See More</button>
+    </div>
+    <div id="about-section" style="display: none;">
+        <h2>About</h2>
+        <p>
+            Welcome to Timber & Grace! Our passion is crafting furniture that blends timeless elegance 
+            with modern designs. Every piece tells a story, bringing warmth and style into your living space. 
+            From handcrafted masterpieces to contemporary essentials, we're here to make your home truly yours.
+        </p>
+    </div>
+    <section id="contact-section">
+        <div class="social-icons">
+            <a href="tel:+254700480098" class="phone" aria-label="Call Timber & Grace"><i class="fa-sharp fa-solid fa-phone-volume"></i></a>
+            <a href="https://wa.link/y8zz6m" class="whatsapp" aria-label="Message Timber & Grace on WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a href="mailto:info@timberandgrace.com" class="email" aria-label="Email Timber & Grace"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://x.com/YatzaaAlkaline" class="twitter" aria-label="Follow Timber & Grace on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form class="newsletter-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="copyright">
+            © 2025 Timber & Grace. All Rights Reserved.
+        </div>
+    </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Timber & Grace",
+        "url": "https://www.timberandgrace.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.timberandgrace.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
