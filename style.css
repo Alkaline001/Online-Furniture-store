@@ -713,12 +713,13 @@ footer {
 
     header .search-bar select,
     header .search-bar .search-input-container {
-        width: 100%;
+        width: 83%;
         margin-bottom: 5px;
     }
 
     header .search-bar button {
         width: 40px;
+        height: 40px;
         position: absolute;
         right: 0;
         top: 0;
