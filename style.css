@@ -695,6 +695,7 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     header {
+        
         flex-direction: column;
         align-items: center;
     }
@@ -706,19 +707,21 @@ footer {
 
     header .search-bar {
         width: 100%;
-        margin: 10px 0;
+        margin:  0;
         flex-direction: column;
         align-items: stretch;
     }
 
     header .search-bar select,
     header .search-bar .search-input-container {
-        width: 100%;
+        width: 83%;
         margin-bottom: 5px;
     }
+    
 
     header .search-bar button {
         width: 40px;
+        height: 40px; /* Fixed height */
         position: absolute;
         right: 0;
         top: 0;
